@@ -59,9 +59,13 @@ func try_build_tower(cell: Vector2i) -> void:
 
 	var tower := Tower.new()
 	add_child(tower)
-	tower.setup(cell, grid_manager, func() -> Array[Enemy]: return enemies)
+	tower.setup(cell, grid_manager, Callable(self, "_get_enemies"))
 	towers.append(tower)
 	_repath_all_enemies()
+
+
+func _get_enemies() -> Array[Enemy]:
+	return enemies
 
 func _repath_all_enemies() -> void:
 	for enemy in enemies:

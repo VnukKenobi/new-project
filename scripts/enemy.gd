@@ -58,6 +58,6 @@ func _process(delta: float) -> void:
 		_path_index += 1
 
 func _draw() -> void:
-	draw_ellipse(Vector2(0, 18), Vector2(14, 6), Color(0, 0, 0, 0.2))
+	draw_ellipse(Vector2(0, 18), 14.0, 6.0, Color(0, 0, 0, 0.2))
 	draw_circle(Vector2.ZERO, 12, Color.WHITE)
 	draw_rect(Rect2(Vector2(-7, -20), Vector2(14, 20)), Color.WHITE, true)

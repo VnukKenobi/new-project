@@ -49,6 +49,6 @@ func fire(enemy: Enemy) -> void:
 	)
 
 func _draw() -> void:
-	draw_ellipse(Vector2(0, 18), Vector2(16, 6), Color(0, 0, 0, 0.2))
+	draw_ellipse(Vector2(0, 18), 16.0, 6.0, Color(0, 0, 0, 0.2))
 	draw_rect(Rect2(Vector2(-14, -8), Vector2(28, 16)), Color(1.0, 0.9, 0.1), true)
 	draw_rect(Rect2(Vector2(8, -3), Vector2(18, 6)), Color(1.0, 0.9, 0.1), true)
