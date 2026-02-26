@@ -70,7 +70,7 @@ func _repath_all_enemies() -> void:
 
 func _repath_enemy(enemy: Enemy) -> void:
 	var start := grid_manager.world_to_cell(enemy.global_position)
-	var new_path := pathfinding_manager.get_path(start, grid_manager.base_cell)
+	var new_path := pathfinding_manager.find_path(start, grid_manager.base_cell)
 	enemy.set_path(new_path, grid_manager)
 
 func _on_enemy_died(enemy: Enemy) -> void:

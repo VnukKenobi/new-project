@@ -25,6 +25,6 @@ func has_path(start: Vector2i, goal: Vector2i) -> bool:
 		return false
 	return not astar.get_id_path(start, goal).is_empty()
 
-func get_path(start: Vector2i, goal: Vector2i) -> Array[Vector2i]:
+func find_path(start: Vector2i, goal: Vector2i) -> Array[Vector2i]:
 	rebuild()
 	return astar.get_id_path(start, goal)
